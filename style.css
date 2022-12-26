@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw; /* View port. 100vw = 1000px / 1vh = 10px */
+    height: 100vh;
+    background-color:#201b2c ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.left-login > h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+
+.left-img {
+    width: 30vw;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%; /* vai pegar os 60% da div que é 50vh. Então será 60% de 50vh */
+    background-color: #2f2841;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+     
+    
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column; /* quando usamos o flex direction o justify content e align itens se invertem */
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 20vw;
+    
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box; /* com isso a div filho não vai ultrapassar o tamanho da div pai */
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94;
+}
+
+.textfield > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    
+    
+}
+.btn-login {
+     width: 60%;
+     padding: 16px 0px;
+     margin: 25px;
+     border: none;
+     border-radius: 10px;
+     text-transform: uppercase;
+     outline: none;
+     font-weight: 800;
+     letter-spacing: 3px;
+     color: #2b134b;
+     background-color: #00ff88;
+     cursor: pointer;
+     box-shadow: 0px 10p 40px -12px #00ff8052;
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+    .left-img {
+        width: 30vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-login {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .left-img {
+        width: 50vw;
+        margin-bottom: 50px;
+    }
+
+    .textfield {
+        width: 30vw;
+    }
+
+    .right-login {
+        width: 80%;
+        height: auto;
+    }
+
+    .btn-login {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .left-login {
+        width: 50%;
+        height: auto;
+    }
+
+    .card-login {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .left-img {
+        display: none;
+    }
+
+
+
+}
